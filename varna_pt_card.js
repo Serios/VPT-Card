@@ -68,181 +68,48 @@ class VarnaPublicTransportCard extends LitElement {
     style() {
       return html`
 		.card { margin: auto; padding-top: 1em;	padding-bottom: 1em; padding-left: 1em; padding-right: 1em; color: ${this.CustomStyle.VPTMainColor}; }
-		 
-
-.varna-pt-live { margin-bottom: 2em; border-top: 1px solid ${this.CustomStyle.VPTBordersColor}; }
-.varna-pt-schedules { border-top: 1px solid ${this.CustomStyle.VPTBordersColor}; padding-top: 5px; }
- 
-			.varna-pt-table-row {
-				display: flex;
-				display: -webkit-flex;
-  flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-wrap: no-wrap;
-  -webkit-flex-wrap: no-wrap;
-  width: 100%;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid ${this.CustomStyle.VPTBordersColor};
-}
-
-
-.varna-pt-wrapper {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  -webkit-flex-direction: row;
-  width: 100%;
-}
-
-.varna-pt-attributes,
-.varna-pt-line-schedule-arrivesin-distance,
-.varna-pt-line-schedule,
-.varna-pt-arrivesin-distance,
- {
-  flex-grow: 1;
-  -webkit-flex-grow: 1;
-  display: flex-row;
-  flex-shrink: 0;
-}
-
-.varna-pt-line-schedule { width: 60%; }
-.varna-pt-arrivesin-distance { width: 40%; }
-
-.varna-pt-column {
-  flex-grow: 0;
-  -webkit-flex-grow: 0;
-  flex-shrink: 0;
-  -webkit-flex-shrink: 0;
-  vertical-align: top;
-}
-
-.varna-pt-line {
-  display: flex; display: -webkit-flex; flex-grow: 1; width: 40%; align-items: center;
-}
-.varna-pt-schedule {
-  flex-grow: 2; align-content: center; width: 60%;
-}
-.varna-pt-arrivesin {
-  flex-grow: 1; width: 50%; text-align: center; font-size: 1.35em;  align-self: center;
-}
-.varna-pt-distance {
-  flex-grow: 1; width: 50%; text-align: center; font-size: 1.3em; align-self: center;
-}
-
-.varna-pt-table-row .varna-pt-nolines { text-align: center; align-self: center; flex-grow: 1; width: 100%; }
-
-.varna-pt-line span { font-size: 1.6em; }
-.varna-pt-bus-arival-delay { display: flex; display: -webkit-flex; align-items: flex-start; font-size: 1.2em; line-height: 1.1em; }
-.varna-pt-schedule span { padding: 4px 3px; border: 1px solid ${this.CustomStyle.VPTDelayBorder}; background: ${this.CustomStyle.VPTDelayBG}; border-radius: 2px; font-size: 0.68em; line-height: 0.6em; margin-left: 5px; margin-top: 1px; font-weight: bold; }
-.varna-pt-schedule span { box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.45); text-shadow: 0 0px 1px rgba(255, 255, 255, 0.45); }
-.varna-pt-bus-extras { width: 100%; color: ${this.CustomStyle.VPTSecondColor}; }
-.varna-pt-bus-extras ha-icon { width: 15px; height: 15px;}
-
-.varna-pt-table-row.varna-pt-header { background: ${this.CustomStyle.VPTHeaderBG}; align-items: center; padding: 3px 0; }
-.varna-pt-table-row.varna-pt-header .varna-pt-line,
-.varna-pt-table-row.varna-pt-header .varna-pt-schedule,
-.varna-pt-table-row.varna-pt-header .varna-pt-arrivesin,
-.varna-pt-table-row.varna-pt-header .varna-pt-distance { font-size: 0.9em!important; text-align: center; }
-.varna-pt-table-row.varna-pt-header .varna-pt-line { text-align: left; padding-left: 5px; }
-
-	  
-.varna-pt-line-schedule-item { 
-				display: flex;
-				display: -webkit-flex;
-  flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-wrap: no-wrap;
-  -webkit-flex-wrap: no-wrap;
-  width: 100%;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid ${this.CustomStyle.VPTBordersColor};
-  align-items: center;
- } 
- 
-.varna-pt-line-schedule-item .varna-pt-line-number { 
-  flex-grow: 1;
-  -webkit-flex-grow: 1;
-  flex-shrink: 0;
-  -webkit-flex-shrink: 0;
-  vertical-align: top;
-  width: 12%;
-  font-size: 1.3em;
-  text-align: center;
- }
- 
-.varna-pt-line-schedule-item .varna-pt-schedule-times {
-  flex-grow: 2;
-  -webkit-flex-grow: 2;
-  flex-shrink: 0;
-  -webkit-flex-shrink: 0;
-  vertical-align: top;
-  width: 88%;
-}
-
-.varna-pt-line-schedule-item .varna-pt-schedule-times .varna-pt-time {	 
-display: inline-block; color: ${this.CustomStyle.VPTSchePadText};
-padding: 4px 3px; border: 1px solid ${this.CustomStyle.VPTSchePadBorder}; background: ${this.CustomStyle.VPTSchePadBG}; border-radius: 2px; font-size: 0.8em; line-height: 0.65em; margin-left: 2px; margin-top: 1px; margin-bottom: 2px;
-} 
-
-.varna-pt-line-schedule-item .varna-pt-schedule-times .varna-pt-time {	 
-box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.45); text-shadow: 0 0px 1px rgba(255, 255, 255, 0.45);
-} 
-	  
-	  
-	  
-	  
-		  table {
-			width: 100%;
-			padding: 0px 36px 16px 0px;
-			border: none;
-			margin-left: 16px;
-			margin-right: 16px;
-		  }
-		  thead th {
-			text-align: left;
-		  }
-		  tbody tr:nth-child(odd) {
-			background-color: var(--primary-background-color);
-			vertical-align: middle;
-		  }
-		  tbody tr:nth-child(even) {
-			background-color: var(--secondary-background-color);
-		  }
-		  td {
-			padding-left: 5px;
-		  }
-		  .emp {
-			 font-weight: bold;
-			 font-size: 120%;
-		  }
-		  .extraic {
-			 width: 1em;
-			 padding-left: 5px;
-		  }
-		  .bus {
-			 color: #44739e;
-			 width: 0.1em;
-		  }
-		  .trolleybus {
-			 color: #cc0000;
-			 width: 1.5em;
-		  }
-		  .tram {
-			 color: #e1e100;
-			 width: 1.5em;
-		  }
-		  .rail {
-			 color: #2ecc71;
-			 width: 1.5em;
-		  }
-		  .islate {
-			color: ${this.CustomStyle.VPTLateColor};
-		  }
-		  .isearly {
-			color: ${this.CustomStyle.VPTEarlyColor};
-		  }
+		.varna-pt-live { margin-bottom: 2em; border-top: 1px solid ${this.CustomStyle.VPTBordersColor}; }
+		.varna-pt-schedules { border-top: 1px solid ${this.CustomStyle.VPTBordersColor}; padding-top: 5px; }
+ 		.varna-pt-table-row { display: flex; display: -webkit-flex; flex-direction: row; -webkit-flex-direction: row; flex-wrap: no-wrap;  -webkit-flex-wrap: no-wrap; }
+ 		.varna-pt-table-row { width: 100%; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px solid ${this.CustomStyle.VPTBordersColor}; }
+		.varna-pt-wrapper { display: flex; display: -webkit-flex; flex-direction: row;  -webkit-flex-direction: row; width: 100%; }
+		.varna-pt-attributes,
+		.varna-pt-line-schedule-arrivesin-distance,
+		.varna-pt-line-schedule,
+		.varna-pt-arrivesin-distance { flex-grow: 1; -webkit-flex-grow: 1; display: flex-row; flex-shrink: 0; }
+		.varna-pt-line-schedule { width: 60%; }
+		.varna-pt-arrivesin-distance { width: 40%; }
+		.varna-pt-column { flex-grow: 0;  -webkit-flex-grow: 0; flex-shrink: 0;  -webkit-flex-shrink: 0; vertical-align: top; }
+		.varna-pt-line { display: flex; display: -webkit-flex; flex-grow: 1; width: 40%; align-items: center; }
+		.varna-pt-schedule { flex-grow: 2; align-content: center; width: 60%; }
+		.varna-pt-arrivesin { flex-grow: 1; width: 50%; text-align: center; font-size: 1.35em;  align-self: center; }
+		.varna-pt-distance { flex-grow: 1; width: 50%; text-align: center; font-size: 1.3em; align-self: center; }
+		.varna-pt-table-row .varna-pt-nolines { text-align: center; align-self: center; flex-grow: 1; width: 100%; }
+		.varna-pt-line span { font-size: 1.6em; }
+		.varna-pt-bus-arival-delay { display: flex; display: -webkit-flex; align-items: flex-start; font-size: 1.2em; line-height: 1.1em; }
+		.varna-pt-schedule span { padding: 4px 3px; border: 1px solid ${this.CustomStyle.VPTDelayBorder}; background: ${this.CustomStyle.VPTDelayBG}; border-radius: 2px; font-size: 0.68em; line-height: 0.6em; margin-left: 5px; margin-top: 1px; font-weight: bold; }
+		.varna-pt-schedule span { box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.45); text-shadow: 0 0px 1px rgba(255, 255, 255, 0.45); }
+		.varna-pt-bus-extras { width: 100%; color: ${this.CustomStyle.VPTSecondColor}; }
+		.varna-pt-bus-extras ha-icon { width: 15px; height: 15px;}
+		.varna-pt-table-row.varna-pt-header { background: ${this.CustomStyle.VPTHeaderBG}; align-items: center; padding: 3px 0; }
+		.varna-pt-table-row.varna-pt-header .varna-pt-line,
+		.varna-pt-table-row.varna-pt-header .varna-pt-schedule,
+		.varna-pt-table-row.varna-pt-header .varna-pt-arrivesin,
+		.varna-pt-table-row.varna-pt-header .varna-pt-distance { font-size: 0.9em!important; text-align: center; }
+		.varna-pt-table-row.varna-pt-header .varna-pt-line { text-align: left; padding-left: 5px; }
+		.varna-pt-line-schedule-item { display: flex; display: -webkit-flex; flex-direction: row;  -webkit-flex-direction: row; flex-wrap: no-wrap; -webkit-flex-wrap: no-wrap; } 
+		.varna-pt-line-schedule-item { width: 100%; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px solid ${this.CustomStyle.VPTBordersColor}; align-items: center; } 
+		.varna-pt-line-schedule-item .varna-pt-line-number { flex-grow: 1;  -webkit-flex-grow: 1; flex-shrink: 0;  -webkit-flex-shrink: 0; vertical-align: top;  width: 12%; font-size: 1.3em; text-align: center; }
+		.varna-pt-line-schedule-item .varna-pt-schedule-times { flex-grow: 2;  -webkit-flex-grow: 2; flex-shrink: 0; -webkit-flex-shrink: 0; vertical-align: top; width: 88%; }
+		.varna-pt-line-schedule-item .varna-pt-schedule-times .varna-pt-time {
+			display: inline-block; color: ${this.CustomStyle.VPTSchePadText};
+			padding: 4px 3px; border: 1px solid ${this.CustomStyle.VPTSchePadBorder}; 
+			background: ${this.CustomStyle.VPTSchePadBG}; 
+			border-radius: 2px; font-size: 0.8em; line-height: 0.65em; margin-left: 2px; margin-top: 1px; margin-bottom: 2px;
+		} 
+		.varna-pt-line-schedule-item .varna-pt-schedule-times .varna-pt-time { box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.45); text-shadow: 0 0px 1px rgba(255, 255, 255, 0.45); } 
+	    .islate { color: ${this.CustomStyle.VPTLateColor}; }
+		.isearly { color: ${this.CustomStyle.VPTEarlyColor}; }
 	  `;
     }
 	
