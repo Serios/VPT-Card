@@ -23,18 +23,14 @@ The card depends on the Varna Public Transport (VPT) custom component which you 
       type: module
   ```
 
-### Updating
-
-Just download the latest files and overwrite what you already have. Don't forget to `?v=X` set X to the actual version in your resources call. If you not using the parameter clear the browser cache.
-
 ### Card configuration
 
 | Name | Type |         | Default | Description |
 |------|------|---------|---------|-------------|
-| type | string | **required** | |`custom:varna-pt-stop-card`
-| entity | string | **required** | `sensor.varna_public_transport` 
-| locale | string | optional | en | In what language to display the card. Available values are: en, bg, ru. See [Translations](#translations) 
-| vptstyles |  | optional |  | See [Styling](#Styling) 
+| type | string | **required** | `custom:varna-pt-stop-card` |  |
+| entity | string | **required** | `sensor.varna_public_transport` |  |
+| locale | string | optional | en | In what language to display the card. Available values are: en, bg, ru. See [Translations](#translations) |
+| vptstyles |  | optional |  | See [Styling](#Styling) |
 
 Example of basic config
 
@@ -98,4 +94,14 @@ Some examples:
     - VPTEarlyColor: '#1b8e00'
 ```
 
- 
+
+theme.yaml
+```yaml
+   VPTHeaderBG: 'rgba(240,240,240, 0.5)'
+   VPTLateColor: '#b80000'
+   VPTEarlyColor: '#1b8e00'
+```
+
+ ### Updating
+
+Just download the latest files and overwrite what you already have. Don't forget to `?v=X` set X to the actual version in your resources call. If you not using the parameter clear the browser cache.
