@@ -13,7 +13,7 @@ const { html, css } = LitElement.prototype;
 
 class VarnaPublicTransportCard extends LitElement {
 
-	version() { return "0.1"; }
+	version() { return "0.3"; }
 
 	constructor () {
 		super();
@@ -214,8 +214,7 @@ class VarnaPublicTransportCard extends LitElement {
 						${BusLines}
                   </div>
                 </div>
-	`; 
-	
+	`; 	
   }
   
 // #####
@@ -493,7 +492,14 @@ class VarnaPublicTransportCard extends LitElement {
 // ##### Sets the card size so HA knows how to put in columns
 // #####
 
-  getCardSize() { return 3 }  
+  getCardSize() { 
+	var live_lines = (this._hass.states[this.config.entity].attributes["lines"]) ? this._hass.states[this.config.entity].attributes["lines"] : 0;
+	var schedule_lines = (this._hass.states[this.config.entity].attributes["lines_schedules"]) ? this._hass.states[this.config.entity].attributes["lines_schedules"] : 0;
+	var card_size = live_lines + schedule_lines + 2
+
+	return card_size 
+  
+  }  
   
 }
 

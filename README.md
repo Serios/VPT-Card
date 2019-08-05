@@ -5,12 +5,15 @@ This Lovelace custom card shows bus stop information for city of Varna, Bulgaria
 The card depends on the Varna Public Transport (VPT) custom component which you can find at
 [https://github.com/Serios/VPT](https://github.com/Serios/VPT/).
 
-![VPT-Card Lovelace example](vpt_card_preview.jpg)
 
 ### Features
 * 3 available modes of displaying data - only dislpays the data you need
 * Configurable styles trough settings or trough theme.yaml
 * Available in 3 languages
+
+
+![VPT-Card Lovelace example](vpt_card_preview.jpg)
+
 
 ### Installation
 1. Download varna_pt_card.js and put it into $homeassistant_config_dir/www/ dir<br />
@@ -71,6 +74,27 @@ Keep in mind that, styles set in config are with priority over styles set in the
 | `VPTSchePadBG` | `VPTSchePadBG` | Any valid background property (hex, RGB, RGBA, HSL, HSLA...) [W3C specs](https://www.w3schools.com/cssref/css3_pr_background.asp) | Controls the background color of times pads in `Schedules` section
 | `VPTSchePadBorder` | `VPTSchePadBorder` | Any hex color value. See [W3C specs](https://www.w3schools.com/cssref/css_colors.asp) | Controls the color of borders of times pads in `Schedules` section
 | `VPTSchePadText` | `VPTSchePadText` | Any hex color value. See [W3C specs](https://www.w3schools.com/cssref/css_colors.asp) | Controls the color of text in times pads in `Schedules` section
+
+
+![VPT-Card Lovelace example](vpt_card_color_map.jpg)
+
+Red - Live data section
+
+Green - Line number
+
+Yellow - Next schedule time at which the vehicle should be on the stop + delay pad
+
+Pink - Vehicle extras
+
+Gray - Time remaining till vehicle arrival at the stop
+
+Purple - Distance of vehicle to the stop
+
+Blue - Schedules section
+
+Brown - Schedule times pads
+
+
 
 Some examples:
 
