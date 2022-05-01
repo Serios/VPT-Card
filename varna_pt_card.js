@@ -1,4 +1,4 @@
-console.info(`%c Varna PT card \n%c Version: ${'0.0.3'} `, 'color: orange; font-weight: bold; background: black', 'color: white; font-weight: bold; background: dimgray');
+console.info(`%c Varna PT card \n%c Version: ${'0.0.4'} `, 'color: orange; font-weight: bold; background: black', 'color: white; font-weight: bold; background: dimgray');
 // #####
 // ##### Get the LitElement and HTML classes from an already defined HA Lovelace class
 // #####
@@ -14,7 +14,7 @@ const { html, css } = LitElement.prototype;
 
 class VarnaPublicTransportCard extends LitElement {
 
-	version() { return "0.0.3"; }
+	version() { return "0.0.4"; }
 
 	constructor () {
 		super();
